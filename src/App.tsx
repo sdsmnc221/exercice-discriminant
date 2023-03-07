@@ -94,6 +94,11 @@ function App() {
           >
             Regénérer l'exercice
           </Button>
+          {showAnswer && (
+            <Typography variant="h2" gutterBottom sx={{ marginTop: '32px' }}>
+              Discriminant : {`${problem.answer}`}
+            </Typography>
+          )}
         </Box>
       )}
     </Container>
