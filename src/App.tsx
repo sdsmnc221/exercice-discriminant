@@ -79,7 +79,6 @@ function App() {
         <Box sx={{ width: '100%', maxWidth: 720, marginTop: '32px' }}>
           <Typography variant="h2" gutterBottom>
             {problem.question}
-            {showAnswer && ` = ${problem.answer}`}
           </Typography>
           <Button
             variant="contained"
