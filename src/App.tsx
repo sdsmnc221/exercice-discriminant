@@ -27,6 +27,11 @@ function App() {
     setDifficulty(e.target.value);
   };
 
+  const handleRegen = () => {
+    setShowAnswer(false);
+    setProblem(generateProblem(difficulty));
+  };
+
   useEffect(() => {
     if (difficulty) {
       setProblem(generateProblem(difficulty));
@@ -81,6 +86,13 @@ function App() {
             onClick={() => setShowAnswer(!showAnswer)}
           >
             {showAnswer ? 'Cacher' : 'Afficher'} la réponse
+          </Button>
+          <Button
+            variant="contained"
+            onClick={handleRegen}
+            sx={{ marginLeft: '32px' }}
+          >
+            Regénérer l'exercice
           </Button>
         </Box>
       )}
